@@ -30,9 +30,6 @@ var simplemde = new SimpleMDE({
     },
     placeholder: "Type here...",
 
-    // previewRender: function (plainText) {
-    //     return customMarkdownParser(plainText); // Returns HTML from a custom parser
-    // },
     previewRender: function (plainText, preview) { // Async method
         setTimeout(function () {
             var currentContent = simplemde.value(); // 에디터의 현재 내용 가져오기
@@ -66,7 +63,12 @@ var simplemde = new SimpleMDE({
     tabSize: 4,
     toolbarTips: false,
     toolbar: ["bold", "italic", "heading", "|", "quote", "unordered-list", "ordered-list",
-        "|", "link", "image", "|", "preview", "side-by-side", "fullscreen", "|", "guide"],
+        "|", {
+            name: "link",
+            action: SimpleMDE.drawLink,
+            className: "fa fa-link",
+            title: "link",
+        }, "image", "|", "preview", "side-by-side", "fullscreen", "|", "guide"],
 });
 document.querySelector('form').addEventListener('submit', function () {
     document.getElementById('MyID').value = simplemde.value();
