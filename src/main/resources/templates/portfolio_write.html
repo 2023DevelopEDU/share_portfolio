@@ -13,8 +13,13 @@
             <div class="row">
                 <div class="col-3"></div>
                 <div class="col-6">
-                    <textarea id="MyID"></textarea>
-                    <script src="mde.js"></script>
+                    <form action="/save" method="post">
+                        <textarea name="markdownContent" id="MyID"></textarea>
+                        <script src="mde.js"></script>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                        <input class="btn btn-primary" type="submit" value="저장">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>    

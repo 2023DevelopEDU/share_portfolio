@@ -68,3 +68,6 @@ var simplemde = new SimpleMDE({
     toolbar: ["bold", "italic", "heading", "|", "quote", "unordered-list", "ordered-list",
         "|", "link", "image", "|", "preview", "side-by-side", "fullscreen", "|", "guide"],
 });
+document.querySelector('form').addEventListener('submit', function () {
+    document.getElementById('MyID').value = simplemde.value();
+});
