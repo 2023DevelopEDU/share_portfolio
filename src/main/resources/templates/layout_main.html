@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}" />
+
+    <title>share portfolio</title>
+    <!-- share portfolio/main CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/main.css}" />
+    <!-- share portfolio/navbar CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/navbar.css}" />
+  </head>
+  <body style="background-color: #ededed">
+    <span th:replace="~{navbar.html::navbarFragment}"></span>
+    <div layout:fragment="content_main" class="hot">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player
+        class="hot-lottie"
+        src="https://lottie.host/e92cce08-cd57-49a5-8dce-d84f34bed457/mVrWJR0Opm.json"
+        background="transparent"
+        speed="1"
+        style="width: 14rem; height: 14rem"
+        loop
+        autoplay
+      ></lottie-player>
+      <span id="hot1">HOT</span>
+      <span id="hot2">지금 뜨는 프로젝트</span>
+      <span id="hot3">여러 분야의 트렌드를 한 눈에 살펴보세요</span>
+    </div>
+    <div class="introduce"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

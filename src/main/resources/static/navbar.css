@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbit&display=swap");
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+#top-navbar {
+  position: relative;
+
+  .navbar-expand-lg {
+    height: 3.3rem;
+  }
+
+  .navbar-brand {
+    margin-left: 14rem;
+    margin-top: 0.1rem;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  #navbarSupportedContent {
+    margin-left: 58.125rem;
+    margin-right: 14rem;
+  }
+
+  #signup {
+    display: block;
+    background-color: #6927ff;
+    color: white;
+    border-radius: 3.1rem;
+    font-size: 1rem;
+    width: 5.3rem;
+    height: 2.37rem;
+    padding-left: 0.96rem;
+    padding-bottom: 0.5625rem;
+    font-family: "SUITE-Regular";
+    font-weight: 500;
+  }
+
+  #login {
+    display: block;
+    background-color: #efefef;
+    color: #000000;
+    border-radius: 3.1rem;
+    font-size: 1rem;
+    width: 5.3rem;
+    padding-left: 1.35rem;
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+    font-family: "SUITE-Regular";
+    font-weight: 500;
+  }
+
+  #search-form {
+    background-color: #efefef;
+    border-radius: 3.125rem;
+  }
+
+  input {
+    background-repeat: no-repeat;
+  }
+
+  input::-webkit-input-placeholder {
+    background-image: url(icon-search.png);
+    background-position: 1px center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  width: 14.125rem;
+  height: 29rem;
+  background-color: #ffffff;
+  margin-left: 14rem;
+  margin-top: 2.625rem;
+  border-radius: 1.25rem;
+  padding-top: 1.875rem;
+  display: inline-block;
+
+  .side {
+    display: block;
+    text-decoration: none;
+    font-family: "SUITE-Regular";
+    font-weight: 600;
+    color: #000000;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+  }
+}
