@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "PyeongChangPeace-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hot {
+  display: inline-block;
+  margin-left: 37.375rem;
+  font-family: "SUITE-Regular";
+
+  .hot-lottie {
+    margin-left: 11.5rem;
+    display: inline-block;
+    position: absolute;
+    margin-top: -3.75rem;
+  }
+
+  #hot1 {
+    position: absolute;
+    font-weight: 700;
+    margin-left: 20rem;
+    font-size: 1.3rem;
+    font-family: "GmarketSansMedium";
+    margin-top: 2.45rem;
+    color: #6927ff;
+  }
+
+  #hot2 {
+    font-weight: 900;
+    font-size: 2rem;
+    position: absolute;
+    font-size: 1.85rem;
+    font-family: "GmarketSansMedium";
+    margin-top: 4.25rem;
+    margin-left: 13.75rem;
+  }
+
+  #hot3 {
+    position: absolute;
+    font-family: "SUITE-Regular";
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 6.75rem;
+    margin-left: 13.75rem;
+  }
+}
