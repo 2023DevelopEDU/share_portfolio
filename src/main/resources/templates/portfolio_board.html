@@ -37,81 +37,24 @@
                         </datalist>
                     </div>
                 </div>
-                <div class="row gx-10">
-                    <div class="card col">
+                <!-- 연결된 데이터베이스 테이블에 id, content, title이 있으면 카드 생성 -->
+                <div th:if="${writings.isEmpty()}">
+                    <p>작성된 글이 없습니다.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="card col-3" th:each="writing : ${writings}" th:id="'card-' + ${writing.id}">
                         <img src="/images/no_image.jpg" class="card-img-top" alt="...">
-
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card col">
-                        <img src="/images/no_image.jpg" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card col">
-                        <img src="/images/no_image.jpg" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title" th:text="${writing.title}">Card title</h5>
+                            <p class="card-text" th:text="${writing.content}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
-                <div class="row gx-10">
-                    <div class="card col">
-                        <img src="/images/no_image.jpg" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card col">
-                        <img src="/images/no_image.jpg" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card col">
-                        <img src="/images/no_image.jpg" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </div>
         <div class="col-2"></div>
-    </div>
-    <div class="row">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
-        </nav>
     </div>
 </div>
