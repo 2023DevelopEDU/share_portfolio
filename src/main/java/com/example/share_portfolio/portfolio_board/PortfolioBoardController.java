@@ -4,6 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.share_portfolio.search.Search;
+import com.example.share_portfolio.search.SearchRepository;
+
 import org.springframework.ui.Model;
 import java.util.List;
 import java.util.ArrayList;
@@ -13,16 +17,16 @@ import java.util.ArrayList;
 public class PortfolioBoardController {
 
     @Autowired
-    private WritingRepository writingRepository;
+    private SearchRepository writingRepository;
 
     @GetMapping
     public String list(Model model) {
-        List<Writing> writings = writingRepository.findAll();
+        List<Search> writings = writingRepository.findAll();
         if(writings.isEmpty()){
             System.out.println("isempty");
         }
         //db 연결 성공 시 데이터 출력
-        for (Writing writing : writings) {
+        for (Search writing : writings) {
             System.out.println("Writing ID: " + writing.getId());
             System.out.println("Writing Title: " + writing.getTitle());
             System.out.println("Writing Content: " + writing.getContent());
