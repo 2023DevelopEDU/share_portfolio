@@ -19,7 +19,7 @@ var simplemde = new SimpleMDE({
     insertTexts: {
         horizontalRule: ["", "\n\n-----\n\n"],
         image: ["![](http://", ")"],
-        link: ["[", "](http://)"],
+        link: ["[", "](https://)"],
         table: ["", "\n\n| Column 1 | Column 2 | Column 3 |\n| -------- | -------- | -------- |\n| Text     | Text      | Text     |\n\n"],
     },
     lineWrapping: false,
@@ -30,14 +30,11 @@ var simplemde = new SimpleMDE({
     },
     placeholder: "Type here...",
 
-    previewRender: function (plainText, preview) { // Async method
-        setTimeout(function () {
-            var currentContent = simplemde.value(); // 에디터의 현재 내용 가져오기
-            preview.innerHTML = customMarkdownParser(currentContent);
-        }, 250);
-
-        return "Loading...";
+    previewRender: function (plainText, preview) {
+        preview.innerHTML = customMarkdownParser(plainText);
+        return preview.innerHTML;
     },
+
     promptURLs: true,
     renderingConfig: {
         singleLineBreaks: false,
@@ -65,11 +62,40 @@ var simplemde = new SimpleMDE({
     toolbar: ["bold", "italic", "heading", "|", "quote", "unordered-list", "ordered-list",
         "|", {
             name: "link",
-            action: SimpleMDE.drawLink,
+            action: function customFunction(editor) {
+                var cm = editor.codemirror;
+                var selection = cm.getSelection();
+                var url = prompt('Enter the URL');
+                cm.replaceSelection('[' + selection + '](https://' + url + ')');
+            },
             className: "fa fa-link",
-            title: "link",
+            title: "Custom Link",
         }, "image", "|", "preview", "side-by-side", "fullscreen", "|", "guide"],
 });
 document.querySelector('form').addEventListener('submit', function () {
     document.getElementById('MyID').value = simplemde.value();
 });
+
+//이미지 삽입 함수
+function insertImage() {
+    var input = document.getElementById('imageInput');
+    var file = input.files[0];
+    var formData = new FormData();
+    formData.append('image', file);
+
+    fetch('/upload', {
+        method: 'POST',
+        body: formData
+    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            var cm = simplemde.codemirror;
+            var output = '![](' + data.url + ')';
+            cm.replaceSelection(output);
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+}
