@@ -1,4 +1,3 @@
-// portfolio_board.js
 document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("exampleDataList");
     const searchResults = document.getElementById("searchResults");
@@ -55,21 +54,7 @@ function renderSearchResults(data) {
         searchResults.appendChild(card);
     });
 }
-const input = document.getElementById("exampleDataList");
-const searchResults = document.getElementById("searchResults");
 
-input.addEventListener("input", () => {
-    const searchText = input.value.trim();
-    const selectedCategory = document.getElementById("search").value;
-
-    // 서버로 검색 요청 보내기
-    fetch(`/search?category=${selectedCategory}&query=${searchText}`)
-        .then(response => response.json())
-        .then(data => {
-            // 검색 결과를 처리하는 함수 호출
-            renderSearchResults(data);
-        });
-});
 function selectOption(inputId, buttonText, element) {
     var selectedValue = element.textContent;
     document.getElementById(inputId).value = selectedValue;

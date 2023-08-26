@@ -1,4 +1,4 @@
-package com.example.share_portfolio.portfolio_board;
+package com.example.share_portfolio.search;
 
 import java.util.ArrayList;
 
@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class WritingController {
+public class SearchController {
 
     @Autowired
-    private WritingService writingService;
+    private SearchService writingService;
 
     @GetMapping("/search")
-    public List<Writing> searchWritings(@RequestParam String category, @RequestParam String query) {
+    public List<Search> searchWritings(@RequestParam String category, @RequestParam String query) {
         if ("제목".equals(category)) {
             return writingService.searchByTitle(query);
         } else if ("내용".equals(category)) {
