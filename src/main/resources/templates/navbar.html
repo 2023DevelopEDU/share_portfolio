@@ -25,15 +25,73 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex" role="search">
+            <form role="search">
               <input class="form-control me-2" id="search-form" type="search" aria-label="Search" />
             </form>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" id="login" aria-current="page" href="#">로그인</a>
+                <button type="button" class="nav-link" id="login">로그인</button>
+                <div id="modal">
+                  <div class="modal_content">
+                    <button type="button" id="modal_close_btn">&times;</button>
+                    <div class="login-container">
+                      <!-- Heading -->
+                      <h1 id="signin-title">Login</h1>
+                      
+                      <!-- Links -->
+                      <ul class="links">
+                        <li>
+                          <a href="#" id="signin">로그인</a>
+                        </li>
+                        <li>
+                          <a href="#" id="signup">회원가입</a>
+                        </li>
+                        <li>
+                          <a href="#" id="reset">리셋</a>
+                        </li>
+                      </ul>
+                      
+                      <!-- Form -->
+                      <form id="userform" action="" method="post">
+                        <!-- email input -->
+                        <div class="first-input input__block first-input__block">
+                           <input type="email" placeholder="이메일" class="input" id="email"   />
+                        </div>
+                        <!-- password input -->
+                        <div class="input__block">
+                           <input type="password" placeholder="비밀번호" class="input" id="password"    />
+                        </div>
+                        <!-- repeat password input -->
+                        <div class="input__block">
+                           <input type="password" placeholder="비밀번호 재입력" class="input repeat__password" id="repeat__password"    />
+                        </div>
+                        <!-- sign in button -->
+                        <button class="signin__btn">
+                          Let's GO🚀
+                        </button>
+                      </form>
+                      <!-- separator -->
+                      <div class="separator">
+                      </div>
+                    </div>
+                    
+                    <footer>
+                      <p>
+                        Thank you for watching
+                        <i class="fa fa-heart"></i> 
+                        <i class="fa fa-heart"></i> 
+                        <i class="fa fa-heart"></i> 
+                      </p>
+                      <p>
+                        ⓒ Chouaib Blgn
+                      </p>
+                    </footer>
+                  </div>
+                  <div class="modal_layer"></div>
+                </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="signup" href="#">회원가입</a>
+                <button type="button" class="nav-link" id="signUp">회원가입</button>
               </li>
             </ul>
           </div>
@@ -52,5 +110,6 @@
       <a class="side" href="#">🎵 음악</a>
       <a class="side" href="#">🏡 건축</a>
     </div>
+    <script src="/login.js"></script>
   </span>
 </html>
