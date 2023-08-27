@@ -8,6 +8,7 @@
 :root {
   --signup-color: #6927ff;
   --login-color: #efefef;
+  --main-background-color: #c7c8c9;
 }
 .btn {
   background-color: var(--signup-color);
@@ -22,7 +23,9 @@ h2 {
 .card {
   margin: 10px;
 }
-
-.col-8 {
-  background-color: rgb(206, 228, 231);
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0;
 }

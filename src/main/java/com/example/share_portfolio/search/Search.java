@@ -12,10 +12,12 @@ public class Search {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
+    
     private String title;
     private String content;
     private String tag;
+
+    private int liked;
 
     // getters and setters
     public int getId() {
@@ -24,6 +26,14 @@ public class Search {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getLike() {
+        return liked;
+    }
+
+    public void setLike(int liked) {
+        this.liked = liked;
     }
 
     public String getTitle() {

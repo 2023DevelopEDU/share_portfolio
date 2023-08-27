@@ -6,30 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
         const searchText = input.value.trim();
         const selectedCategory = document.getElementById("search").value;
 
-        // 서버로 검색 요청 보내기
+        // Send search request to the server
         fetch(`/search?category=${selectedCategory}&query=${searchText}`)
             .then(response => response.json())
             .then(data => {
-                // 검색 결과를 처리하는 함수 호출
+                // Call the function that processes the search results
                 renderSearchResults(data);
             });
     });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-    const searchResults = document.getElementById("searchResults");
-
-    fetch(`/search?category=&query=`) // category와 query를 빈 값으로 보내면 모든 게시물을 가져옴
+    // Fetch all posts when the page is loaded
+    fetch(`/search?category=&query=`)
         .then(response => response.json())
         .then(data => {
             renderSearchResults(data);
         });
 });
 
-
 function renderSearchResults(data) {
     const searchResults = document.getElementById("searchResults");
-    searchResults.innerHTML = ""; // 기존 검색 결과 초기화
+    searchResults.innerHTML = ""; // Reset existing search results
 
     if (data.length === 0) {
         searchResults.innerHTML = "<p>검색 결과가 없습니다.</p>";
@@ -47,7 +43,9 @@ function renderSearchResults(data) {
                 <h5 class="card-title">${writing.title}</h5>
                 <p class="card-text">${writing.content}</p>
                 <p class="card-text">${writing.tag}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <span>👍 ${writing.like} </span>
+                <a href="#" class="btn btn-primary"  style="background-color:#6927ff"
+                >보러가기</a>
             </div>
         `;
 
