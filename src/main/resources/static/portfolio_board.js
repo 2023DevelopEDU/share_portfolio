@@ -44,7 +44,7 @@ function renderSearchResults(data) {
                 <p class="card-text">${writing.content}</p>
                 <p class="card-text">${writing.tag}</p>
                 <span>👍 ${writing.liked} </span>
-                <a href="#" class="btn btn-primary"  style="background-color:#6927ff"
+                <a href="/post/${writing.id}" class="btn btn-primary" style="background-color:#6927ff"
                 >보러가기</a>
             </div>
         `;

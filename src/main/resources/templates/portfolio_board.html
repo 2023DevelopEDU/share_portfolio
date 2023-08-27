@@ -39,25 +39,20 @@
                                     <input type="hidden" name="category" id="search" />
                                 </div>
                                 <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="검색" style="width: 100%;">
-                                <datalist id="datalistOptions">
-                                    <option value="San Francisco">
-                                    <option value="New York">
-                                    <option value="Seattle">
-                                    <option value="Los Angeles">
-                                    <option value="Chicago">
-                                </datalist>
-                            </div>
-                                    
+                            </div>                            
                         </div>
-                    </div>
+                        <div style="padding-top: 10px; text-align:end">
+                            <a href="/writing" class="btn" style="background-color: #6927ff; color: white;
+                            margin-right: 60px;">글쓰기</a>
+                        </div>     
+                    </div>                   
                     <div id="searchResults" class="row justify-content-center" style="min-height: 500px;">
-
+                        
                         <!-- 검색 결과 출력 -->
                     </div>
                     <div th:if="${writings.isEmpty()}">
                         <p>작성된 글이 없습니다.</p>
                     </div>
-                    
                 </div>
             </div>
             <div class="col-2"></div>
