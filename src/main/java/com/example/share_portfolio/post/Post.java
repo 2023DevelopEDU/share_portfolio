@@ -1,10 +1,17 @@
 package com.example.share_portfolio.post;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
+import com.example.share_portfolio.user.SiteUser;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 @Entity
 @Table(name = "writing")
 public class Post {
@@ -20,8 +27,17 @@ public class Post {
     private String board;
     private String category;
     
+    @ManyToOne
+    private SiteUser author;
 
     // getters and setters
+    public SiteUser getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(SiteUser author) {
+        this.author = author;
+    }
     public int getId() {
         return id;
     }

@@ -2,6 +2,7 @@ var swiper = new Swiper(".swiper", {
   // Default parameters
   slidesPerView: 1,
   spaceBetween: 10,
+  loop: true,
 
   // If we need pagination
   pagination: {

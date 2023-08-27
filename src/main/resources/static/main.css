@@ -14,11 +14,11 @@
 
 .hot {
   display: inline-block;
-  margin-left: 37.375rem;
+  /*margin-left: 37.375rem;*/
   font-family: "SUITE-Regular";
 
   .hot-lottie {
-    margin-left: 11.5rem;
+    margin-left: 53.875rem;
     display: inline-block;
     position: absolute;
     margin-top: -3.75rem;
@@ -27,7 +27,7 @@
   #hot1 {
     position: absolute;
     font-weight: 700;
-    margin-left: 20rem;
+    margin-left: 62.375rem;
     font-size: 1.3rem;
     font-family: "GmarketSansMedium";
     margin-top: 2.45rem;
@@ -41,7 +41,7 @@
     font-size: 1.85rem;
     font-family: "GmarketSansMedium";
     margin-top: 4.25rem;
-    margin-left: 13.75rem;
+    margin-left: 56.125rem;
   }
 
   #hot3 {
@@ -50,19 +50,73 @@
     font-size: 1rem;
     font-weight: 500;
     margin-top: 6.75rem;
-    margin-left: 13.75rem;
+    margin-left: 56.125rem;
   }
 }
 
+#swiper-move {
+  margin-left: 30.5rem;
+}
+
 .swiper {
-  width: 60rem;
-  height: 40rem;
-  margin-top: 8.8rem;
-  position: relative;
+  position: absolute;
+  width: 69rem; /*1104px*/
+  height: 40rem; /*640px*/
+  margin-top: 9.5rem;
+  border-radius: 20px;
 }
 
 .swiper-slide {
   background-color: white;
+}
+
+.swiper-slide img {
+  filter: brightness(90%);
+}
+
+.swiper-slide-active .text-wrap {
+  top: 44%;
+  opacity: 1;
+  transition: 0.5s;
+}
+.text-wrap {
+  position: absolute;
+  top: 50%;
+
+  left: 0;
+  right: 0;
+  width: 600px;
+  opacity: 0;
+  margin: auto;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 3;
+}
+.text-wrap h2 {
+  color: #fff;
+  font-size: 48px;
+  line-height: 1.25;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.text-wrap p {
+  color: #fff;
+  font-size: 20px;
+}
+.swiper .swiper-pagination-bullet {
+  background-color: #6927ff;
+}
+
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 3px;
+  border-radius: 0;
+  background-color: #fff;
+}
+.swiper-pagination-bullet-active {
+  background: #fff;
+  background-color: #6927ff;
+  width: 80px;
 }
 
 .swiper-button-next.swiper-button-disabled,
@@ -72,14 +126,14 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: 40px;
-  height: 40px;
+  width: 5px;
+  height: 5px;
   background-color: rgba(240, 240, 240, 0.7);
   backdrop-filter: blur(3px);
   background-size: 18px;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 2;
+  z-index: 5;
   border-radius: 50%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -96,8 +150,8 @@
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: #004fff;
-  box-shadow: 0 4px 12px rgba(0, 79, 255, 0.4);
+  background-color: #6927ff;
+  box-shadow: 0 4px 12px rgba(72, 0, 255, 0.4);
 }
 
 .swiper-button-prev {
