@@ -12,12 +12,14 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
+    private int liked;
+
     private String title;
     private String content;
     private String tag;
-
-    private int liked;
+    private String board;
+    private String category;
+    
 
     // getters and setters
     public int getId() {
@@ -55,8 +57,20 @@ public class Post {
     public String getTag() {
         return tag;
     }
-
     public void setTag(String tag) {
         this.tag = tag;
     }
+    public void setBoard(String board) {
+        this.board = board;
+    }
+    public String getBoard() {
+        return board;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+    public String getCategory() {
+        return category;
+    }   
 }

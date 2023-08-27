@@ -7,16 +7,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/post")
+@RequestMapping
 @Controller
 public class PostController {
     
     @Autowired
     private PostService postService; // Assume you have a service to fetch post data
 
-    @GetMapping(value="/{id}")
+    @GetMapping(value="post/{id}")
     public String Posts(@PathVariable("id") Long id, Model model){
         Optional<Post> postOptional = postService.getPostById(id);
         if (postOptional.isPresent()) {
@@ -25,5 +26,10 @@ public class PostController {
         } else {
             return "404";
         }
+    }
+    @PostMapping("/post/save")
+    public String savePost(Post post){
+        postService.savePost(post);
+        return "redirect:/post/" + post.getId();
     }
 }
