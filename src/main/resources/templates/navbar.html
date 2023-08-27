@@ -1,4 +1,4 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" smlns:sec="http://www.thymeleaf.org/extras/spring-security">
   <span th:fragment="navbarFragment" class="total-navbar">
     <div id="top-navbar">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -32,10 +32,12 @@
             </form>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" id="login" sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+                <span sec:authorize="isAuthenticated()"></span>
+                <a class="nav-link" id= "login" sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+                <a class="nav-link" id= "logout" sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="signUp" sec:authorize="isAuthenticated()" th:href="@{/user/signup}">회원가입</a>
+                <a class="nav-link" id="signUp" th:href="@{/user/signup}">회원가입</a>
               </li>
             </ul>
           </div>
