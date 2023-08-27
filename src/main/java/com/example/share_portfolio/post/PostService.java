@@ -21,4 +21,9 @@ public class PostService {
     public Optional<Post> getPostById(Long id) {
         return postRepository.findById(id);
     }
+
+    // 게시물 저장하고 저장된 게시물 반환
+    public Post savePost(Post post){
+        return postRepository.save(post);
+    }
 }
