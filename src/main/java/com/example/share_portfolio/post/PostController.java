@@ -13,20 +13,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.security.Principal;
-import com.example.share_portfolio.user.SiteUser;
-import com.example.share_portfolio.user.UserService;
-
-
 @RequestMapping
 @Controller
 public class PostController {
 
     @Autowired
     private PostService postService; // Assume you have a service to fetch post data
-    
-    private UserService userService;
 
+    private UserService userService;
     @GetMapping(value="post/{id}")
     public String Posts(@PathVariable("id") Long id, Model model){
         Optional<Post> postOptional = postService.getPostById(id);
