@@ -1,12 +1,8 @@
 package com.example.share_portfolio.post;
 
-import org.aspectj.weaver.patterns.TypePatternQuestions.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
+@Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
-        Question findByCategory(String category);
-        Question findByCategoryAndContent(String category, String content);
-        List<Question> findBySubjectLike(String subject);
 }
