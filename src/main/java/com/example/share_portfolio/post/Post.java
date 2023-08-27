@@ -1,4 +1,4 @@
-package com.example.share_portfolio.search;
+package com.example.share_portfolio.post;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "writing")
-public class Search {
+public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
