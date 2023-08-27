@@ -5,15 +5,16 @@
         <div class="container-fluid">
           <script src="http://code.jquery.com/jquery-latest.js"></script>
           <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-          <a class="navbar-brand" href="#"><lottie-player
-            src="https://lottie.host/d5069ff3-2a92-4d4b-b1f0-be6bd9c1572c/iQ4GOm14kK.json"
-            background="transparent"
-            speed="1"
-            style="width: 10rem; height: 10rem"
-            loop
-            autoplay
-          ></lottie-player
-        ></a></a>
+          <a class="navbar-brand" href="#"
+            ><lottie-player
+              src="https://lottie.host/d5069ff3-2a92-4d4b-b1f0-be6bd9c1572c/iQ4GOm14kK.json"
+              background="transparent"
+              speed="1"
+              style="width: 10rem; height: 10rem"
+              loop
+              autoplay
+            ></lottie-player
+          ></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -31,68 +32,10 @@
             </form>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <button type="button" class="nav-link" id="login">로그인</button>
-                <div id="modal">
-                  <div class="modal_content">
-                    <button type="button" id="modal_close_btn">&times;</button>
-                    <div class="login-container">
-                      <!-- Heading -->
-                      <h1 id="signin-title">Login</h1>
-                      
-                      <!-- Links -->
-                      <ul class="links">
-                        <li>
-                          <a href="#" id="signin">로그인</a>
-                        </li>
-                        <li>
-                          <a href="#" id="signup">회원가입</a>
-                        </li>
-                        <li>
-                          <a href="#" id="reset">리셋</a>
-                        </li>
-                      </ul>
-                      
-                      <!-- Form -->
-                      <form id="userform" action="" method="post">
-                        <!-- email input -->
-                        <div class="first-input input__block first-input__block">
-                           <input type="email" placeholder="이메일" class="input" id="email"   />
-                        </div>
-                        <!-- password input -->
-                        <div class="input__block">
-                           <input type="password" placeholder="비밀번호" class="input" id="password"    />
-                        </div>
-                        <!-- repeat password input -->
-                        <div class="input__block">
-                           <input type="password" placeholder="비밀번호 재입력" class="input repeat__password" id="repeat__password"    />
-                        </div>
-                        <!-- sign in button -->
-                        <button class="signin__btn">
-                          Let's GO🚀
-                        </button>
-                      </form>
-                      <!-- separator -->
-                      <div class="separator">
-                      </div>
-                    </div>
-                    
-                    <footer>
-                      <p>
-                        Thank you for watching
-                        <i class="fa fa-heart"></i> 
-                        <i class="fa fa-heart"></i> 
-                        <i class="fa fa-heart"></i> 
-                      </p>
-                      <p>
-                        ⓒ Chouaib Blgn
-                      </p>
-                    </footer>
-                  </div>
-                  <div class="modal_layer"></div>
-                </div>
+                <a class="nav-link" id="login" sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
               </li>
               <li class="nav-item">
-                <button type="button" class="nav-link" id="signUp">회원가입</button>
+                <a class="nav-link" id="signUp" sec:authorize="isAuthenticated()" th:href="@{/user/signup}">회원가입</a>
               </li>
             </ul>
           </div>
