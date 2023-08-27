@@ -31,7 +31,7 @@ public class Post {
     private SiteUser author;
 
     // getters and setters
-        public SiteUser getAuthor() {
+    public SiteUser getAuthor() {
         return author;
     }
 
