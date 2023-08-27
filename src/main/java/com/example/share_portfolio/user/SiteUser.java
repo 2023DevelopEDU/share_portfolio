@@ -25,4 +25,8 @@ public class SiteUser {
 
     @Column(unique = true)
     private String email;
+    
+    private String phone;
+    
+    private String introduction;
 }
