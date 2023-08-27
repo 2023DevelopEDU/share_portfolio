@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}" />
 
     <title>share portfolio</title>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- share portfolio/main CSS -->
     <link rel="stylesheet" type="text/css" th:href="@{/main.css}" />
@@ -15,10 +16,12 @@
     <link rel="stylesheet" type="text/css" th:href="@{/navbar.css}" />
     <!-- Bootstrap JS -->
     <script th:src="@{/bootstrap.min.js}"></script>
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   </head>
   <body style="background-color: #ededed">
     <span th:replace="~{navbar.html::navbarFragment}"></span>
-    <div layout:fragment="content_main" class="hot">
+    <div class="hot">
       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       <lottie-player
         class="hot-lottie"
@@ -32,6 +35,27 @@
       <span id="hot1">HOT</span>
       <span id="hot2">지금 뜨는 프로젝트</span>
       <span id="hot3">여러 분야의 트렌드를 한 눈에 살펴보세요</span>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+      <script src="/custom_swiper.js"></script>
     </div>
     <div class="introduce"></div>
   </body>
