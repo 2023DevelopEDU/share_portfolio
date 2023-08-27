@@ -35,9 +35,9 @@
   background: white;
   width: 90%;
   height: fit-content;
-  margin: 80px auto;
-  padding-bottom: 40px;
-  padding-top: 80px;
+  margin: 60px auto;
+  padding-bottom: 20px;
+  padding-top: 60px;
   padding-left: 30px;
   padding-right: 30px;
   max-width: 680px;
@@ -206,7 +206,7 @@ footer p .fa {
 
 #back-icon {
   position: absolute;
-  margin-top: -190px;
+  margin-top: -165px;
   margin-left: 605px;
   width: 2rem;
   height: 2rem;
