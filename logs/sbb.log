@@ -26,3 +26,45 @@
 2023-08-27 22:00:09.511  INFO 19288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2023-08-27 22:00:09.518  INFO 19288 --- [restartedMain] c.e.s.SharePortfolioApplication          : Started SharePortfolioApplication in 9.057 seconds (process running for 5356.024)
 2023-08-27 22:00:09.523  INFO 19288 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-27 22:00:55.795  INFO 19288 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-27 22:00:55.864  INFO 19288 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-27 22:00:55.879  INFO 19288 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-27 22:00:55.881  INFO 19288 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-08-27 22:00:55.894  INFO 19288 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-08-27 22:00:56.062  INFO 19288 --- [restartedMain] c.e.s.SharePortfolioApplication          : Starting SharePortfolioApplication using Java 17.0.7 with PID 19288 (C:\Users\chldb\project\share_portfolio\bin\main started by chldb in C:\Users\chldb\project\share_portfolio)
+2023-08-27 22:00:56.064  INFO 19288 --- [restartedMain] c.e.s.SharePortfolioApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-08-27 22:00:56.647  INFO 19288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-27 22:00:56.684  INFO 19288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+2023-08-27 22:00:56.965  INFO 19288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-27 22:00:56.967  INFO 19288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-27 22:00:56.969  INFO 19288 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-27 22:00:57.048  INFO 19288 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-27 22:00:57.049  INFO 19288 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 982 ms
+2023-08-27 22:00:57.084  INFO 19288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-08-27 22:00:59.211  INFO 19288 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@741bda42
+2023-08-27 22:00:59.212  INFO 19288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-08-27 22:00:59.213  INFO 19288 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://share-portfolio-server.mysql.database.azure.com:3306/test'
+2023-08-27 22:00:59.267  INFO 19288 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-27 22:00:59.301  INFO 19288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-27 22:00:59.302  INFO 19288 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-27 22:00:59.311  WARN 19288 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-08-27 22:00:59.334  INFO 19288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-27 22:00:59.450  INFO 19288 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-27 22:00:59.829  INFO 19288 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-27 22:00:59.894  WARN 19288 --- [restartedMain] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.share_portfolio.search.SearchRepository
+2023-08-27 22:00:59.948  WARN 19288 --- [restartedMain] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.share_portfolio.user.UserRepository
+2023-08-27 22:00:59.981  WARN 19288 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-27 22:01:00.036  INFO 19288 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53e566d0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5796d4f8, org.springframework.security.web.context.SecurityContextHolderFilter@4050a2c5, org.springframework.security.web.header.HeaderWriterFilter@3ee89e0, org.springframework.security.web.csrf.CsrfFilter@f10b47, org.springframework.security.web.authentication.logout.LogoutFilter@2d788ef5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a034843, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48f332bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f2d6429, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66d4ad1d, org.springframework.security.web.access.ExceptionTranslationFilter@2b3f86da, org.springframework.security.web.access.intercept.AuthorizationFilter@8373897]
+2023-08-27 22:01:00.245  INFO 19288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-27 22:01:00.268  INFO 19288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-27 22:01:00.276  INFO 19288 --- [restartedMain] c.e.s.SharePortfolioApplication          : Started SharePortfolioApplication in 4.283 seconds (process running for 5406.783)
+2023-08-27 22:01:00.280  INFO 19288 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-27 22:01:00.628  INFO 19288 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-27 22:01:00.629  INFO 19288 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-27 22:01:00.631  INFO 19288 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-08-27 22:01:43.511  INFO 19288 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-27 22:01:43.546  INFO 19288 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-27 22:01:43.547  INFO 19288 --- [Thread-11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-27 22:01:43.552  INFO 19288 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-27 22:01:43.553  INFO 19288 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-08-27 22:01:43.561  INFO 19288 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
