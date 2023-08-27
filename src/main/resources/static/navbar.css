@@ -86,23 +86,34 @@
 }
 
 .sidebar {
-  position: fixed;
-  width: 14.125rem;
-  height: 29rem;
+  position: absolute;
+  width: 12.125rem;
+  height: 28rem;
   background-color: #ffffff;
   margin-left: 14rem;
-  margin-top: 2.625rem;
+  margin-top: 9.6rem;
   border-radius: 1.25rem;
-  padding-top: 1.875rem;
+  padding-top: 1.675rem;
   display: inline-block;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
   .side {
     display: block;
     text-decoration: none;
     font-family: "SUITE-Regular";
     font-weight: 600;
-    color: #000000;
-    padding-left: 2rem;
+    color: #373737;
+    margin-left: 1.7rem;
     padding-bottom: 1rem;
+  }
+
+  .side:hover {
+    font-family: "GmarketSansMedium";
+    font-weight: 700;
+    color: #552e98;
   }
 }
