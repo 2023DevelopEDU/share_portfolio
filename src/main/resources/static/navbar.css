@@ -54,6 +54,20 @@
     font-weight: 500;
   }
 
+  #logout {
+    display: block;
+    background-color: #efefef;
+    color: #000000;
+    border-radius: 3.1rem;
+    font-size: 1rem;
+    width: 5.8rem;
+    padding-left: 1.3rem;
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+    font-family: "SUITE-Regular";
+    font-weight: 500;
+  }
+
   #search-form {
     background-color: #efefef;
     border-radius: 3.125rem;
