@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}" />
+
+    <title>Config</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- share portfolio/main CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/main.css}" />
+    <!-- share portfolio/navbar CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/navbar.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/layout_footer.css}" />
+    <!-- Bootstrap JS -->
+    <script th:src="@{/bootstrap.min.js}"></script>
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  </head>
+  <body style="background-color: #ededed">
+    <span th:replace="~{navbar.html::navbarFragment}"></span>
+    <h1>Welcome to Your My Page</h1>
+    <p>Username: <span th:text="${user.username}"></span></p>
+    <p>Email: <span th:text="${user.email}"></span></p>
+
+    <h2>Edit User Info</h2>
+    <form th:action="@{/update/{id}(id=${user.id})}" method="post">
+        <button type="submit">Update</button>
+    </form>
+
+    <h2>Delete Account</h2>
+    <form th:action="@{/delete/{id}(id=${user.id})}" method="post" onsubmit="return confirm('Are you sure you want to delete your account?');">
+        <button type="submit">Delete</button>
+    </form>
+    <span th:replace="~{layout_footer.html::footerFragment}"></span>
+  </body>
+</html>
