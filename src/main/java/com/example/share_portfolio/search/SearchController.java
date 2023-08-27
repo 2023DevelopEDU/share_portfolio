@@ -15,7 +15,10 @@ public class SearchController {
     private SearchService writingService;
 
     @GetMapping("/search")
-    public List<Search> searchWritings(@RequestParam String category, @RequestParam String query) {
+    public List<Search> searchWritings(@RequestParam(required = false) String category, @RequestParam(required = false) String query) {
+        if (category == null || query == null || category.isEmpty() || query.isEmpty()) {
+            return writingService.getAllWritings();
+        }
         if ("제목".equals(category)) {
             return writingService.searchByTitle(query);
         } else if ("내용".equals(category)) {
@@ -24,8 +27,6 @@ public class SearchController {
             return writingService.searchByTag(query);
         }
 
-        return new ArrayList<>(); // 기본값은 빈 리스트 반환
+        return new ArrayList<>(); // Return empty list as default
     }
 }
-
-

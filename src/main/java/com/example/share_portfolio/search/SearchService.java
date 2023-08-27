@@ -24,4 +24,8 @@ public class SearchService {
         // 태그로 검색하여 결과 반환
         return writingRepository.findByTagContaining(query);
     }
+    public List<Search> getAllWritings() {
+        // Implement the method to fetch all writings from the database
+        return writingRepository.findAll();
+    }
 }
