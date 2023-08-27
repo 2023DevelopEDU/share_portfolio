@@ -35,25 +35,50 @@
       <span id="hot1">HOT</span>
       <span id="hot2">지금 뜨는 프로젝트</span>
       <span id="hot3">여러 분야의 트렌드를 한 눈에 살펴보세요</span>
-      <!-- Slider main container -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          ...
+      <div id="swiper-move">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a href="#" target="_blank">
+                <div class="text-wrap">
+                  <h2>올해의 디자인 트렌드<br />- Y2K -</h2>
+                  <p>Y2K 컨셉으로 팬시문구 디자인</p>
+                </div>
+                <img src="img/img-02.png" alt="" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" target="_blank">
+                <div class="text-wrap">
+                  <h2>해양 생물 3D 모델링</h2>
+                  <p>3D 모델링 포트폴리오</p>
+                </div>
+                <img src="img/img-01.png" alt="" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" target="_blank">
+                <div class="text-wrap">
+                  <h2>
+                    아기자기한 그래픽의 날씨 어플<br />
+                    by Aksonvady Phomhome
+                  </h2>
+                  <p>ios 포트폴리오</p>
+                </div>
+                <img src="img/img-03.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev" style="width: 40px; height: 40px"></div>
+          <div class="swiper-button-next" style="width: 40px; height: 40px"></div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
       </div>
       <script src="/custom_swiper.js"></script>
     </div>
