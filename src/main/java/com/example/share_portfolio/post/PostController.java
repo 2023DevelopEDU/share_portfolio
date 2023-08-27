@@ -2,6 +2,9 @@ package com.example.share_portfolio.post;
 
 import java.util.Optional;
 
+import org.commonmark.node.Node;
+import org.commonmark.parser.Parser;
+import org.commonmark.renderer.html.HtmlRenderer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,23 +21,29 @@ import com.example.share_portfolio.user.UserService;
 @RequestMapping
 @Controller
 public class PostController {
-    
+
     @Autowired
     private PostService postService; // Assume you have a service to fetch post data
     
     private UserService userService;
 
-
     @GetMapping(value="post/{id}")
     public String Posts(@PathVariable("id") Long id, Model model){
         Optional<Post> postOptional = postService.getPostById(id);
         if (postOptional.isPresent()) {
-            model.addAttribute("post", postOptional.get());
+            Post post = postOptional.get();
+            Parser parser = Parser.builder().build();
+            Node document = parser.parse(post.getContent());
+            HtmlRenderer renderer = HtmlRenderer.builder().build();
+            String htmlContent = renderer.render(document);
+            post.setContent(htmlContent);
+            model.addAttribute("post", post);
             return "post";
         } else {
             return "404";
         }
     }
+
     @PostMapping("/post/save")
     public String savePost(Post post){
         postService.savePost(post);

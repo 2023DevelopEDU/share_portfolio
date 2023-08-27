@@ -33,6 +33,7 @@ dependencies {
     runtimeOnly group: 'com.mysql', name: 'mysql-connector-j', version: '8.0.33' // MySQL connector
     implementation 'org.json:json:20230227'
     runtimeOnly 'com.h2database:h2'
+    implementation 'com.atlassian.commonmark:commonmark:0.17.1'
 }
 
 tasks.named('test') {
