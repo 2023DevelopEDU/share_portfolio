@@ -99,3 +99,4 @@ function insertImage() {
             console.error(error);
         });
 }
+const convertedContent = content.replace(/\n/g, '<br>');
