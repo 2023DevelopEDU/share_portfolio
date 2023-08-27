@@ -20,7 +20,6 @@ public class PostController {
     @Autowired
     private PostService postService; // Assume you have a service to fetch post data
 
-    private UserService userService;
     @GetMapping(value="post/{id}")
     public String Posts(@PathVariable("id") Long id, Model model){
         Optional<Post> postOptional = postService.getPostById(id);
