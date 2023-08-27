@@ -43,7 +43,9 @@ function renderSearchResults(data) {
                 <h5 class="card-title">${writing.title}</h5>
                 <p class="card-text">${writing.content}</p>
                 <p class="card-text">${writing.tag}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <span>👍 ${writing.like} </span>
+                <a href="#" class="btn btn-primary"  style="background-color:#6927ff"
+                >보러가기</a>
             </div>
         `;
 

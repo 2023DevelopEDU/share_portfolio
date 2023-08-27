@@ -31,6 +31,7 @@ public class PortfolioBoardController {
             System.out.println("Writing Title: " + writing.getTitle());
             System.out.println("Writing Content: " + writing.getContent());
             System.out.println("Writing Tag: " + writing.getTag());
+            System.out.println("Writing Tag: " + writing.getLike());
         }
     
         model.addAttribute("writings", writings != null ? writings : new ArrayList<>()); // 빈 리스트 설정
