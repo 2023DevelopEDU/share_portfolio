@@ -212,20 +212,20 @@
 }
 
 .intro-share1 {
-  padding-top: 38rem;
+  padding-top: 30rem;
   font-size: 2.8rem;
   margin-bottom: 0;
-  padding-left: 42.5rem;
+  padding-left: 40.5rem;
 }
 
 .intro-share2 {
   font-size: 2.8rem;
-  padding-left: 42.5rem;
+  padding-left: 40.5rem;
 }
 
 .intro-share3 {
   position: absolute;
-  margin-left: 43rem;
+  margin-left: 41rem;
   font-size: 1.3rem;
   margin-top: 1.2rem;
 }
@@ -249,7 +249,7 @@
 #config-share {
   position: absolute;
   margin-left: 28rem;
-  margin-top: -37rem;
+  margin-top: -45rem;
   z-index: -1;
 }
 
@@ -315,4 +315,39 @@
   height: 200px;
   margin-top: 20px;
   margin-left: 10px;
+}
+
+#github01,
+#github02,
+#github03 {
+  position: absolute;
+  display: none;
+  margin-top: 3rem;
+  margin-left: -18rem;
+}
+
+#card-01-span:hover {
+  #card-01 {
+    filter: brightness(50%);
+  }
+  #github01 {
+    display: inline-block;
+  }
+}
+
+#card-02-span:hover {
+  #card-02 {
+    filter: brightness(50%);
+  }
+  #github02 {
+    display: inline-block;
+  }
+}
+#card-03-span:hover {
+  #card-03 {
+    filter: brightness(50%);
+  }
+  #github03 {
+    display: inline-block;
+  }
 }
