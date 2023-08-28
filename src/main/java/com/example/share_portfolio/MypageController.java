@@ -25,7 +25,7 @@ public class MypageController {
             // 사용자 정보가 없을 경우 처리
         }
         model.addAttribute("user", user);
-        return "mypage";
+        return "my_page";
     }
 
     @PostMapping("/update/{id}")
@@ -36,7 +36,7 @@ public class MypageController {
             user.setEmail(updatedUser.getEmail());
             userRepository.save(user);
         }
-        return "redirect:/mypage/" + id;
+        return "redirect:/my_page/" + id;
     }
 
     @PostMapping("/delete/{id}")
