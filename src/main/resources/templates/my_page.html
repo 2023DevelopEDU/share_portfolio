@@ -25,12 +25,12 @@
                 <p><프로필></p>
                 <form id="profileForm">
                     <div class="form-group">
-                        <label for="name">📛 이름 :</label>
-                        <input type="text" class="form-control" id="name" name="name" value="Name" disabled>
+                        <label for="name">📛 이름 :</span></label>
+                        <input type="text" class="form-control" id="name" name="name" th:value="${user.username}" disabled>
                     </div>
                     <div class="form-group">
                         <label for="email">✉️ 메일 :</label>
-                        <input type="email" class="form-control" id="email" name="email" value="Email" disabled>
+                        <input type="email" class="form-control" id="email" name="email" th:value="${user.email}"  disabled>
                     </div>
                     <div class="form-group">
                         <label for="phone">📞 번호:</label>
