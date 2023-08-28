@@ -41,7 +41,7 @@ function renderSearchResults(data) {
             <img src="/images/no_image.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${writing.title}</h5>
-                <p class="card-text">${writing.content}</p>
+                <p class="card-text">${writing.category}</p>
                 <p class="card-text">${writing.tag}</p>
                 <span>👍 ${writing.liked} </span>
                 <a href="/post/${writing.id}" class="btn btn-primary" style="background-color:#6927ff"
