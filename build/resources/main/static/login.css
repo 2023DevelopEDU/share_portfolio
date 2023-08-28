@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbit&display=swap");
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PyeongChangPeace-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.modal_layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/back-img.png);
+  background-size: cover;
+  z-index: -1;
+}
+
+.login-content {
+  background: white;
+  width: 90%;
+  height: fit-content;
+  margin: 60px auto;
+  padding-bottom: 20px;
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 680px;
+  display: block;
+  border-radius: 20px;
+}
+
+.login-container {
+  font-family: "GmarketSansMedium";
+  padding-bottom: 100px;
+}
+
+#signin-title {
+  color: #6927ff;
+  font-size: 48px;
+  letter-spacing: -3px;
+  text-align: center;
+  margin: 120px 0 80px 0;
+  transition: 0.2s linear;
+}
+
+.links {
+  list-style-type: none;
+}
+
+.links li {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  transition: 0.2s linear;
+}
+
+.links li:nth-child(2) {
+  opacity: 0.6;
+}
+.links li:nth-child(2):hover {
+  opacity: 1;
+}
+.links li:nth-child(3) {
+  opacity: 0.6;
+  float: right;
+}
+.links li:nth-child(3):hover {
+  opacity: 1;
+}
+.links li a {
+  text-decoration: none;
+  color: #0f132a;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+}
+
+#userform {
+  width: 100%;
+  max-width: 680px;
+  margin: 40px auto 10px;
+  font-family: "SUITE-Regular";
+}
+
+#userform .input__block {
+  margin: 20px auto;
+  display: block;
+  position: relative;
+}
+
+#userform .input__block.first-input__block::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50px;
+  display: block;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid rgba(15, 19, 42, 0.1);
+  transition: 0.2s linear;
+}
+
+#userform .input__block.signup-input__block::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 150px;
+  display: block;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid rgba(15, 19, 42, 0.1);
+  transition: 0.2s linear;
+}
+
+#userform .input__block input {
+  display: block;
+  width: 90%;
+  max-width: 680px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: none;
+  background: rgba(15, 19, 42, 0.1);
+  color: rgba(15, 19, 42, 0.3);
+  padding: 0 0 0 15px;
+  font-size: 14px;
+  font-family: "SUITE-Regular";
+}
+
+#userform .input__block input:focus,
+#userform .input__block input:active {
+  outline: none;
+  border: none;
+  color: #0f132a;
+}
+
+#userform .input__block input.repeat__password {
+  opacity: 0;
+  display: none;
+  transition: 0.2s linear;
+}
+
+#userform .signin__btn {
+  background: #6927ff;
+  color: white;
+  display: block;
+  width: 90%;
+  max-width: 680px;
+  height: 50px;
+  border-radius: 8px;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "SUITE-Regular";
+  box-shadow: 0 15px 30px rgba(101, 49, 206, 0.36);
+  transition: 0.2s linear;
+}
+
+#userform .signin__btn:hover {
+  box-shadow: 0 0 0 rgba(233, 30, 99, 0);
+}
+
+.separator {
+  display: block;
+  margin: 30px auto 10px;
+  text-align: center;
+  height: 40px;
+  position: relative;
+  background: transparent;
+  color: rgba(15, 19, 42, 0.4);
+  font-size: 13px;
+  width: 90%;
+  max-width: 680px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 15px;
+  font-family: "SUITE-Regular";
+}
+footer p .fa {
+  color: #6927ff;
+}
+
+#back-icon {
+  position: absolute;
+  margin-top: -165px;
+  margin-left: 605px;
+  width: 2rem;
+  height: 2rem;
+  fill: rgb(79, 79, 79);
+}

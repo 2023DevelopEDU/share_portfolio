@@ -1,0 +1,62 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" smlns:sec="http://www.thymeleaf.org/extras/spring-security">
+  <span th:fragment="navbarFragment" class="total-navbar">
+    <div id="top-navbar">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <script src="http://code.jquery.com/jquery-latest.js"></script>
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <a class="navbar-brand" th:href="@{/}"
+            ><lottie-player
+              src="https://lottie.host/d5069ff3-2a92-4d4b-b1f0-be6bd9c1572c/iQ4GOm14kK.json"
+              background="transparent"
+              speed="1"
+              style="width: 10rem; height: 10rem"
+              loop
+              autoplay
+            ></lottie-player
+          ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form role="search">
+              <input class="form-control me-2" id="search-form" type="search" aria-label="Search" />
+            </form>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <span sec:authorize="isAuthenticated()"></span>
+                <a class="nav-link" id="login" sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+                <a class="nav-link" id="logout" sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="signUp" th:href="@{/user/signup}">회원가입</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="sidebar">
+      <a class="side" href="#" id="all">✨ 전체</a>
+      <a class="side" href="#" id="web">🌏 WEB</a>
+      <a class="side" href="#" id="app">📱 APP</a>
+      <a class="side" href="#" id="ai">🤖 인공지능</a>
+      <a class="side" href="#" id="it">💻 IT</a>
+      <a class="side" href="#" id="elec">⚡ 전자/전기</a>
+      <a class="side" href="#" id="design">✏️ 디자인</a>
+      <a class="side" href="#" id="pic">🎨 그림</a>
+      <a class="side" href="#" id="music">🎵 음악</a>
+      <a class="side" href="#" id="house">🏡 건축</a>
+    </div>
+    <script src="/login.js"></script>
+    <script src="/navbar.js"></script>
+  </span>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Config signup</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/login.css}" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script th:src="@{/bootstrap.min.js}"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="login-content">
+        <div class="login-container">
+          <a th:href="@{/}"><img id="back-icon" src="/img/icon-x.svg" /></a>
+          <!-- Heading -->
+          <h1 id="signin-title">Sign up🚀</h1>
+
+          <!-- Links -->
+          <ul class="links">
+            <li>
+              <a href="#" id="signup">회원가입</a>
+            </li>
+            <li></li>
+            <li>
+              <a href="#" id="reset">리셋</a>
+            </li>
+          </ul>
+
+          <!-- Form -->
+          <form th:action="@{/user/signup}" th:object="${userCreateForm}" id="userform" method="post">
+            <!-- email input -->
+            <div class="first-input input__block first-input__block">
+              <input type="text" placeholder="유저 네임" class="input form-control" th:field="*{username}" />
+            </div>
+            <div class="input__block">
+              <input type="email" placeholder="이메일" class="input form-control" th:field="*{email}" />
+            </div>
+            <!-- password input -->
+            <div class="input__block">
+              <input type="password" placeholder="비밀번호" class="input form-control" th:field="*{password1}" />
+            </div>
+            <!-- repeat password input -->
+            <div class="input__block">
+              <input type="password" placeholder="비밀번호 확인" class="input form-control" th:field="*{password2}" />
+            </div>
+            <!-- sign in button -->
+            <button type="submit" class="signin__btn">회원가입하기🔥</button>
+          </form>
+          <!-- separator -->
+          <div class="separator"></div>
+        </div>
+        <footer>
+          <p>
+            Thank you for watching
+            <i class="fa fa-heart"></i>
+            <i class="fa fa-heart"></i>
+            <i class="fa fa-heart"></i>
+          </p>
+          <p>ⓒ Chouaib Blgn</p>
+        </footer>
+      </div>
+      <div class="modal_layer"></div>
+      <script src="/login.js"></script>
+    </div>
+  </body>
+</html>
