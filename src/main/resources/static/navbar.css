@@ -88,7 +88,7 @@
 .sidebar {
   position: absolute;
   width: 12.125rem;
-  height: 28rem;
+  height: 30rem;
   background-color: #ffffff;
   margin-left: 14rem;
   margin-top: 9.6rem;
@@ -115,5 +115,9 @@
     font-family: "GmarketSansMedium";
     font-weight: 700;
     color: #552e98;
+  }
+
+  #it {
+    margin-top: 1.5rem;
   }
 }
