@@ -13,7 +13,7 @@ import com.example.share_portfolio.user.UserRepository; // UserRepository 클래
 
 
 @Controller
-public class MyPageController {
+public class MypageController {
 
     @Autowired
     private UserRepository userRepository;
